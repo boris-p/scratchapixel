@@ -1,3 +1,4 @@
+from __future__ import annotations
 import math
 
 
@@ -21,8 +22,12 @@ class Vector3:
             self.y = self.y * inv_lev
             self.z = self.z * inv_lev
 
-    def dot(self):
-        pass
+    # this can be seen as the projection of one vector A over vector B
+    # the dot product is denoted by A . B, can also be written as < A,B >
+    # and consists of multiplying each element of the A vector with the
+    # vector B coutnerpart
+    def dot(self, v: Vector3):
+        return self.x * v.x + self.y * v.y + self.z * v.z
 
     def cross(self):
         pass

@@ -10,5 +10,8 @@
   "python.autoComplete.extraPaths": [
     "/home/boris/projects/personal/scratchpixel"
   ],
-  "python.linting.pylintPath": "/home/boris/projects/personal/scratchpixel/env/bin/pylint"
+  "python.linting.pylintPath": "/home/boris/projects/personal/scratchpixel/env/bin/pylint",
+  "python.testing.pytestArgs": [
+    "tests"
+  ]
 }
