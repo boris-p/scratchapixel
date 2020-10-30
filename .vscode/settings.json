@@ -11,7 +11,9 @@
     "/home/boris/projects/personal/scratchpixel"
   ],
   "python.linting.pylintPath": "/home/boris/projects/personal/scratchpixel/env/bin/pylint",
-  "python.testing.pytestArgs": [
-    "tests"
-  ]
+  "python.testing.pytestArgs": ["tests"],
+  "files.exclude": {
+    "\"**/*.pyc\": {\"when\": \"$(basename).py\"}, ": true,
+    "**/__pycache__": true
+  }
 }
