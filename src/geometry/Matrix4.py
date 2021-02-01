@@ -1,4 +1,5 @@
 from __future__ import annotations
+from copy import deepcopy
 
 
 class Matrix4:
@@ -29,7 +30,7 @@ class Matrix4:
 
     # *this rule isn't so important for us because we will almost always use 4x4 matrix so we generally won't care about whether matrices can be multiplied or not
     def __init__(self):
-        self.m = self.IDENTITY_MATRIX
+        self.m = deepcopy(self.IDENTITY_MATRIX)
 
     # also called matrix product, and results in a new matrix
     # Matrix multiplication indeed is not commutative. M1*M2 doesn't give the same result than M2*M1
@@ -45,4 +46,13 @@ class Matrix4:
                     m1[i][1] * m2[1][j] + \
                     m1[i][2] * m2[2][j] + \
                     m1[i][3] * m2[3][j]
+        return res_m
+
+    # Useful for converting matrices from row major to column major
+    def transpose(self) -> Matrix4:
+        res_m = Matrix4()
+        m = res_m.m
+        for i in range(4):
+            for j in range(4):
+                m[i][j] = self.m[j][i]
         return res_m

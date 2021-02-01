@@ -1,4 +1,5 @@
 from __future__ import annotations
+from src.geometry.Matrix4 import Matrix4
 import math
 
 
@@ -47,7 +48,7 @@ class Vector3:
         return math.acos(a.dot(b))
 
     # differently from the dot product, the cross product returns a vector
-    # a vector that is perpendicular to the othe rtwo
+    # a vector that is perpendicular to the other two
     # written in the following syntax C= A X B
     # here (as opposed to with the dot product) the order of A and B does matter ( in defining the direction of the angle)
     # You can use the same mnemonic technique to find out in which direction the vector should point to depending on the convention you are using.
@@ -59,7 +60,7 @@ class Vector3:
     # the more perpendicular vectors are the larger that area will be
 
     # how do these two concepts work together?
-    # the lenght of the created vector is equals the area of the parallelogram
+    # the length of the created vector equals the area of the parallelogram
     def cross(self, v: Vector3):
         a = self
         b = v
@@ -87,3 +88,21 @@ class Vector3:
         self.x /= n
         self.y /= n
         self.z /= n
+
+    def multByMatrix(self, matrix_obj: Matrix4):
+        m = matrix_obj.m
+        self.x = self.x * m[0][0] + self.y * \
+            m[1][0] + self.z * m[2][0] + m[3][0]
+        self.y = self.x * m[0][1] + self.y * \
+            m[1][1] + self.z * m[2][1] + m[3][1]
+        self.z = self.x * m[0][2] + self.y * \
+            m[1][2] + self.z * m[2][2] + m[3][2]
+        w = self.x * m[0][3] + self.y * m[1][3] + self.z * m[2][3] + m[3][3]
+
+        # almost never this will be the case but if it is we want to normalize the point so that w is 1
+        # an alternative approach would be to have two functions, one that normalizes and one that doesn't
+        # that would be a more performant solution
+        if w != 1 and w != 0:
+            self.x = self.x / w
+            self.y = self.y / w
+            self.z = self.z / w
