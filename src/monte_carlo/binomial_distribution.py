@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 BASE_PATH = pathlib.Path(pathlib.Path(__file__).parent, 'artifacts')
 fc = math.factorial
 
-# calculating the chance that when tossing a coin six times two time will be heads (let's say heads means 1)
+# calculating the chance that when tossing a coin NUM_OF_SAMPLES times X will be heads (let's say heads means 1)
 
 NUM_OF_SAMPLES = 10
 
 
-def calc_tosses_prob(n):
+def calc_tosses_res_prob(n):
     # n = number of samples to be 1
     p = 0.5  # the probability of one toss
     N = NUM_OF_SAMPLES  # number of samples
@@ -21,7 +21,7 @@ def calc_tosses_prob(n):
 
 
 tosses = range(NUM_OF_SAMPLES+1)
-outcomes = [calc_tosses_prob(i) for i in tosses]
+outcomes = [calc_tosses_res_prob(i) for i in tosses]
 
 
 x = tosses
