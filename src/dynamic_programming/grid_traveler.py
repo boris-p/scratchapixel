@@ -4,8 +4,14 @@
 def grid_traveler(m, n, cached={}) -> int:
     if m < 2 or n < 2:
         return min(m, n)
-    # if (m, n)
-    return grid_traveler(m-1, n) + grid_traveler(m, n-1)
+    if (m, n) in cached:
+        return cached[(m, n)]
+    if (n, m) in cached:
+        return cached[(n, m)]
+    cached[(m, n)] = grid_traveler(m-1, n, cached) + \
+        grid_traveler(m, n-1, cached)
+    return cached[(m, n)]
+    # return grid_traveler(m-1, n) + grid_traveler(m, n-1)
 
 
 print("should all be 1")
@@ -19,3 +25,4 @@ print(grid_traveler(3, 2))
 
 print("3*3 grid")
 print(grid_traveler(3, 3))
+print(grid_traveler(18, 18))

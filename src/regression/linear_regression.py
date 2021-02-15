@@ -1,10 +1,10 @@
 # consider some phenomenon of interest and have a number of observations
 # each observation has two of more features and we try to establish a relationship between them
 
-# on other words we need to find a function that maps some
+# in other words we need to find a function that maps some
 # features or variables to others sufficiently well
 
-# it is commont do denote outputs with a y and inputs
+# it is common do denote outputs with a y and inputs
 # (independent variables) with an x
 
 # if there are two or more independent variables they can be represented as a vector
@@ -131,4 +131,3 @@ y_pred = model.predict(x)
 print('predicted response:', y_pred, sep='\n')
 
 # for more detailed results, it's also possible to use a library called statsmodels
-
