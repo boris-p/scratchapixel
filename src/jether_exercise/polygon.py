@@ -1,3 +1,6 @@
+import math
+
+
 class PolygonIndexError(Exception):
     def __init__(self, ind):
         self.message = f'Polygon index at: {ind} out of range'
@@ -32,16 +35,23 @@ class LinkedListIterator:
             self.current = self.current.next
             return item
 
-    # is there also prev?
-
 
 class Polygon:
     # todo support adding points when initiating the class
     def __init__(self):
         self.__head = None
         # self.__tail = None - maybe use this later for improved performance
-        self.__points = []
         self.__total_points = 0
+
+        # a dictionary that holds the length of each edge and number of occurrences
+        # used in checks for a regular polygon
+        self.__edges_len = {}
+
+        # a dictionary that holds the angles of the polygon and number of occurrences
+        # used in checks for a regular polygon
+        self.__angles = {}
+
+        # TODO - don't forget to cache the value of the area and if it's a right polygon
 
     def insert(self, new_pt, ind):
         # if this is the first element init the head with the element
@@ -72,6 +82,13 @@ class Polygon:
 
         self.__total_points += 1
 
+        if self.__total_points > 3:
+            a =
+            b =
+            c =
+            d =
+            self.__analyze_polygon_points(a, b, c, d)
+
     def remove(self, ind):
         if ind >= self.__total_points:
             raise PolygonRemoveIndexError(ind, self.__total_points)
@@ -89,6 +106,23 @@ class Polygon:
             curr_node.next.prev = curr_node.prev
 
         self.__total_points -= 1
+
+    def area(self):
+        pass
+
+    def __analyze_polygon_points(self, a, b, c, d):
+        pass
+
+    # this could be static?
+    def __point_angle(self, pt_node):
+        a = 1
+        b = 1
+        c = 1
+        ang = math.degrees(math.atan2(
+            c[1]-b[1], c[0]-b[0]) - math.atan2(a[1]-b[1], a[0]-b[0]))
+        ang = ang + 360 if ang < 0 else ang
+
+        z_cross_product = (a[0]-b[0])*(b[1]-c[1])-(a[1]-b[1])*(b[0]-c[0])
 
     def __setitem__(self, ind, new_pt):
         try:
