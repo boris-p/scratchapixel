@@ -76,6 +76,13 @@ def test_rectangle_does_not_return_area():
     assert p.area() == -1
 
 
+def test_2points():
+    p = Polygon()
+    p.insert((0, 0), 0)
+    p.insert((0, 5), 1)
+    assert p.area() == -1
+
+
 def test_square():
     p = Polygon()
     for i, pt in enumerate(reg_polygon_helper(4, 80)):

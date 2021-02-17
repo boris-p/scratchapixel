@@ -39,7 +39,7 @@ class LinkedListIterator:
             return item
 
 
-# TODO - write why i'm doing round
+# approximate angle and edge length calculations to avoid precision errors
 def approximate(num):
     return round(num * ROUND_DECIMALS) / ROUND_DECIMALS
 
@@ -99,9 +99,10 @@ class Polygon:
         if self.__total_points < 3:
             return
 
+        # update local polygon values for checking is a polygon is regular
         if self.__total_points == 3:
             # TODO - make this more concise
-            c = new_node  # new point
+            c = new_node
             a = self.__next(c)
             b = self.__prev(c)
             self.__angle_and_zproduct(a, b, c, 'add')
@@ -112,7 +113,7 @@ class Polygon:
             self.__edge_len(b, c, 'add')
             self.__edge_len(c, a, 'add')
         else:
-            e = new_node  # new point
+            e = new_node
             b = self.__prev(new_node)
             a = self.__prev(b)
             c = self.__next(new_node)
@@ -149,6 +150,8 @@ class Polygon:
             self.__tail = curr_node.prev
 
         self.__total_points -= 1
+
+        # update local polygon values for checking is a polygon is regular
 
     def area(self):
         # we consider the polygon regular if all angles are the same size
@@ -229,8 +232,8 @@ class Polygon:
             raise PolygonIndexError(ind)
 
     def __getitem__(self, ind):
+        # TODO - support negative values to access from the end
         # TODO - i'm not handling errors well
-        # TODO - i'm not handling negative values
         curr_node = self.__head
         for _ in range(ind):
             curr_node = curr_node.next
