@@ -59,7 +59,8 @@ class Polygon:
         # used in checks for a regular polygon
         self.__angles = dict()
 
-        self.__z_product_sum = 0
+        self.__z_product_pos = 0
+        self.__z_product_neg = 0
         # TODO - don't forget to cache the value of the area and if it's a right polygon
 
     def insert(self, new_pt, ind):
@@ -152,7 +153,7 @@ class Polygon:
     def area(self):
         # we consider the polygon regular if all angles are the same size
         # edges have the same length and its convex
-        if self.__z_product_sum == self.__total_points and \
+        if max(self.__z_product_neg, self.__z_product_pos) == self.__total_points and \
                 len(self.__edges_len) == 1 and len(self.__angles) == 1:
 
             side_len, sides = [*self.__edges_len.items()][0]
@@ -160,7 +161,7 @@ class Polygon:
 
             # todo - don't forget to cache the area
             area = side_len * sides * apothem / 2
-            return approximate(area)
+            return area
         else:
             return -1
 
@@ -173,9 +174,6 @@ class Polygon:
     def __next(self, node):
         return node.next if node.next else self.__head
 
-    def __analyze_polygon_points(self, a, b, c, d):
-        pass
-
     def __angle_and_zproduct(self, _a, _b, _c, operation):
         a = _a.pt
         b = _b.pt
@@ -184,26 +182,30 @@ class Polygon:
             c[1]-b[1], c[0]-b[0]) - math.atan2(a[1]-b[1], a[0]-b[0]))
         ang = ang + 360 if ang < 0 else ang
         ang = approximate(ang)
-        print(f"angle is: {ang}")
 
-        z_cross_product_pos = int((a[0]-b[0])*(b[1]-c[1]) -
-                                  (a[1]-b[1])*(b[0]-c[0]) > 0)
-        print(f"z_cross_product is bigger than 0: {z_cross_product_pos}")
+        z_cross_product_pos = ((a[0]-b[0])*(b[1]-c[1]) -
+                               (a[1]-b[1])*(b[0]-c[0]) > 0)
 
-        # todo - enums?
         if operation == 'add':
-            self.__z_product_sum += z_cross_product_pos
+            if z_cross_product_pos is True:
+                self.__z_product_pos += 1
+            else:
+                self.__z_product_neg += 1
+
             self.__angles[ang] = self.__angles[ang] + \
                 1 if self.__angles.get(ang) else 1
 
         elif operation == 'remove':
-            self.__z_product_sum -= z_cross_product_pos
+            if z_cross_product_pos is True:
+                self.__z_product_pos -= 1
+            else:
+                self.__z_product_neg -= 1
+
             self.__angles[ang] -= 1
             if self.__angles[ang] == 0:
                 del self.__angles[ang]
 
     def __edge_len(self, _a, _b, operation):
-        # TODO geometry to precision?
         a = _a.pt
         b = _b.pt
         edge = approximate(math.dist(a, b))
@@ -224,7 +226,6 @@ class Polygon:
                 curr_node = curr_node.next
             curr_node.pt = new_pt
         except:
-            # this is not consistent with some of the other errors I raise
             raise PolygonIndexError(ind)
 
     def __getitem__(self, ind):
@@ -240,68 +241,3 @@ class Polygon:
 
     def __iter__(self):
         return LinkedListIterator(self.__head)
-
-
-if __name__ == '__main__':
-
-    p = Polygon()
-
-    p.insert((0, 0), 0)
-    p.insert((5, 2), 1)
-    p.insert((10, 8), 2)
-    p.insert((20, 2), 3)
-    print(f'polygon contains {len(p)} points')
-
-    p.insert((5, 8), 0)
-    p.insert((7, 14), 0)
-    p.insert((8, 88), 6)
-    p.insert((8, 9), 7)
-    p.remove(7)
-    p[0] = (20, 14)
-    p[1] = (8, 8)
-    p[7] = (12, 12)
-    for pt in p:
-        print(pt)
-
-    print(f'polygon contains {len(p)} points')
-    print(f'Point at index 0 is {p[0]}')
-    print(f'Point at index 3 is {p[3]}')
-
-    print(f'Last Point is {p[-1]}')  # this is not working atm
-    print(f'Last Point is {p[len(p) -1]}')
-
-    print("removing point at index 0")
-    p.remove(0)
-    for pt in p:
-        print(pt)
-
-    print("removing point at index 0")
-    p.remove(0)
-    for pt in p:
-        print(pt)
-
-    print("removing point at index 1")
-    p.remove(1)
-    for pt in p:
-        print(pt)
-
-    print("removing point at index 3")
-    p.remove(3)
-    for pt in p:
-        print(pt)
-
-    print("removing point at index 2")
-    p.remove(2)
-    try:
-        p.remove(10)
-    except:
-        print("tried to remove element that doesnt exist")
-    for pt in p:
-        print(pt)
-
-    p.remove(0)
-    p.remove(0)
-    p.remove(0)
-    p.remove(0)
-    for pt in p:
-        print(pt)
