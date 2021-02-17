@@ -82,6 +82,9 @@ class Polygon:
         for _ in range(ind - 1):
             curr_node = curr_node.next
 
+        # for _ in range(ind - 1):
+        #     curr_node = curr_node.next
+
         next_node = curr_node.next
 
         if ind == self.__total_points:

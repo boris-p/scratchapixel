@@ -50,6 +50,31 @@ def test_adding_2_points():
     assert p.area() == -1
 
 
+def test_adding_removing_and_editing_points():
+    # todo
+    pass
+
+
+def test_adding_removing_and_editing_points2():
+    p = Polygon()
+    for i, pt in enumerate(reg_polygon_helper(5)):
+        p.insert(pt, i)
+    assert math.isclose(p.area(), reg_pol_area(5), abs_tol=0.4)
+
+    original_pt = p[3]
+    p[3] = (30, 30)
+    assert p.area() == -1
+
+    p[3] = original_pt
+    assert math.isclose(p.area(), reg_pol_area(5), abs_tol=0.4)
+
+    p.remove(3)
+    assert p.area() == -1
+
+    p.insert(original_pt, 3)
+    assert math.isclose(p.area(), reg_pol_area(5), abs_tol=0.4)
+
+
 def test_squares():
 
     for i in range(2, 8):
@@ -161,26 +186,6 @@ def test_update_point():
 
     assert p[5] == (20, 4)
     assert len(p) == 6
-
-
-def test_adding_removing_and_editing_points():
-    p = Polygon()
-    for i, pt in enumerate(reg_polygon_helper(5)):
-        p.insert(pt, i)
-    assert math.isclose(p.area(), reg_pol_area(5), abs_tol=0.4)
-
-    original_pt = p[3]
-    p[3] = (30, 30)
-    assert p.area() == -1
-
-    p[3] = original_pt
-    assert math.isclose(p.area(), reg_pol_area(5), abs_tol=0.4)
-
-    p.remove(3)
-    assert p.area() == -1
-
-    p.insert(original_pt, 3)
-    assert math.isclose(p.area(), reg_pol_area(5), abs_tol=0.4)
 
 
 def test_area_running_time():
