@@ -51,6 +51,10 @@ class Polygon:
         self.__tail = None
         self.__total_points = 0
 
+        # we cache the area and flush the cash anytime a point changes
+        # so that we perform the area calculation only once per a set amount of points
+        self.__area = None
+
         # a dictionary that holds the length of each edge and number of occurrences
         # used in checks for a regular polygon
         self.__edges_len = dict()
@@ -59,11 +63,13 @@ class Polygon:
         # used in checks for a regular polygon
         self.__angles = dict()
 
+        # check the convexity of polygon - used for checking the polygon is regular
         self.__z_product_pos = 0
         self.__z_product_neg = 0
-        # TODO - don't forget to cache the value of the area and if it's a right polygon
 
     def insert(self, new_pt, ind):
+
+        self.__area = None
         # if this is the first element init the head with the element
         # for now not doing checks that the index exists
         # probably should add logic that if index is too high add to the end
@@ -99,41 +105,28 @@ class Polygon:
         if self.__total_points < 3:
             return
 
-        # update local polygon values for checking is a polygon is regular
+        # update local polygon values for checking if a polygon is regular
+        e = new_node
+        b = self.__prev(e)
+        a = self.__prev(b)
+        c = self.__next(e)
+        d = self.__next(c)
+
+        self.__angle_and_zproduct(a, b, e, 'add')
+        self.__angle_and_zproduct(b, e, c, 'add')
+        self.__angle_and_zproduct(e, c, d, 'add')
+        self.__edge_len(b, e, 'add')
+        self.__edge_len(e, c, 'add')
+
         if self.__total_points == 3:
-            # TODO - make this more concise
-            c = new_node
-            a = self.__next(c)
-            b = self.__prev(c)
-            self.__angle_and_zproduct(a, b, c, 'add')
-            self.__angle_and_zproduct(b, c, a, 'add')
-            self.__angle_and_zproduct(c, a, b, 'add')
-
-            self.__edge_len(a, b, 'add')
-            self.__edge_len(b, c, 'add')
-            self.__edge_len(c, a, 'add')
+            self.__edge_len(c, d, 'add')
         else:
-
-            e = new_node
-            b = self.__prev(e)
-            a = self.__prev(b)
-            c = self.__next(e)
-            d = self.__next(c)
-
-        # if self.__total_points == 3:
-        #     self.__edge_len(e, c, 'add')
-        # else:
             self.__angle_and_zproduct(a, b, c, 'remove')
             self.__angle_and_zproduct(b, c, d, 'remove')
             self.__edge_len(b, c, 'remove')
 
-            self.__angle_and_zproduct(a, b, e, 'add')
-            self.__angle_and_zproduct(b, e, c, 'add')
-            self.__angle_and_zproduct(e, c, d, 'add')
-            self.__edge_len(b, e, 'add')
-            self.__edge_len(e, c, 'add')
-
     def remove(self, ind):
+        self.__area = None
 
         if ind >= self.__total_points:
             raise PolygonRemoveIndexError(ind, self.__total_points)
@@ -155,7 +148,7 @@ class Polygon:
 
         self.__total_points -= 1
 
-        # update local polygon values for checking is a polygon is regular
+        # update local polygon values for checking if a polygon is regular
         if self.__total_points < 3:
             # reset area calculation stores
             self.__edges_len = dict()
@@ -181,6 +174,12 @@ class Polygon:
         self.__edge_len(b, c, 'add')
 
     def area(self):
+        # we clear the area every time a mutation to the polygon occurs
+        # if we have an area it means it was asked before and no change
+        # to the oplygon was done
+        if self.__area:
+            return self.__area
+
         # we consider the polygon regular if all angles are the same size
         # edges have the same length and it is convex
         if max(self.__z_product_neg, self.__z_product_pos) == self.__total_points and \
@@ -189,15 +188,15 @@ class Polygon:
             side_len, sides = [*self.__edges_len.items()][0]
             apothem = side_len / (2 * (math.tan(math.radians(180 / sides))))
 
-            # todo - don't forget to cache the area
             area = side_len * sides * apothem / 2
+            self.__area = area
             return area
         else:
+            self.__area = None
             return -1
 
     # get prev node (if index is 0 return the last)
     def __prev(self, node):
-        # todo - support prev prev (number of steps)
         return node.prev if node.prev else self.__tail
 
     # get next node (if node is last return the first)
@@ -249,12 +248,33 @@ class Polygon:
                 del self.__edges_len[edge]
 
     def __setitem__(self, ind, new_pt):
+        self.__area = None
         try:
             # todo - handle exceptions and the like - if we're trying to add to an index that doesn't exist, if it's the first time we try to add
             curr_node = self.__head
             for _ in range(ind):
                 curr_node = curr_node.next
+
+            old_node = Node(curr_node.pt)
             curr_node.pt = new_pt
+
+            # update local polygon values for checking if a polygon is regular
+            e = curr_node
+            b = self.__prev(e)
+            a = self.__prev(b)
+            c = self.__next(e)
+            d = self.__next(c)
+            self.__edge_len(b, old_node, 'remove')
+            self.__edge_len(old_node, c, 'remove')
+            self.__edge_len(b, e, 'add')
+            self.__edge_len(e, c, 'add')
+
+            self.__angle_and_zproduct(a, b, old_node, 'remove')
+            self.__angle_and_zproduct(b, old_node, c, 'remove')
+            self.__angle_and_zproduct(old_node, c, d, 'remove')
+            self.__angle_and_zproduct(a, b, e, 'add')
+            self.__angle_and_zproduct(b, e, c, 'add')
+            self.__angle_and_zproduct(e, c, d, 'add')
         except:
             raise PolygonIndexError(ind)
 

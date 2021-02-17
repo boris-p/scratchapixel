@@ -1,8 +1,8 @@
 import math
+from time import time
 from random import randint, random
 
 from src.jether_exercise.polygon import Polygon
-from src.jether_exercise.polygon import approximate
 
 
 def reg_polygon_helper(sides, radius=1, rotation=0, translation=None):
@@ -20,7 +20,7 @@ def reg_polygon_helper(sides, radius=1, rotation=0, translation=None):
     return points
 
 
-def reg_pol_area(sides, radius):
+def reg_pol_area(sides, radius=1):
     side_len = math.sin(math.radians(180 / sides)) * radius * 2
     apothem = math.cos(math.radians(180 / sides)) * radius
     area = side_len * sides * apothem / 2
@@ -30,6 +30,24 @@ def reg_pol_area(sides, radius):
 def test_new_polygon():
     p = Polygon()
     assert len(p) == 0
+
+
+def test_iterating_over_points():
+    pts = [(7, 1), (16, 6), (11, 14), (3, 9)]
+    p = Polygon()
+
+    for i, pt in enumerate(pts):
+        p.insert(pt, i)
+
+    for i, pt in enumerate(p):
+        assert pt is pts[i]
+
+
+def test_adding_2_points():
+    p = Polygon()
+    p.insert((0, 0), 0)
+    p.insert((0, 5), 1)
+    assert p.area() == -1
 
 
 def test_squares():
@@ -76,13 +94,6 @@ def test_rectangle_does_not_return_area():
     assert p.area() == -1
 
 
-def test_2points():
-    p = Polygon()
-    p.insert((0, 0), 0)
-    p.insert((0, 5), 1)
-    assert p.area() == -1
-
-
 def test_square():
     p = Polygon()
     for i, pt in enumerate(reg_polygon_helper(4, 80)):
@@ -125,8 +136,41 @@ def test_update_point():
     p.insert((20, 4), 5)
     assert p.area() == -1
 
-    assert p[5] is (20, 4)
+    assert p[5] == (20, 4)
     assert len(p) == 6
+
+
+def test_adding_removing_and_editing_points():
+    p = Polygon()
+    for i, pt in enumerate(reg_polygon_helper(5)):
+        p.insert(pt, i)
+    assert math.isclose(p.area(), reg_pol_area(5), abs_tol=0.4)
+
+    original_pt = p[3]
+    p[3] = (30, 30)
+    assert p.area() == -1
+
+    p[3] = original_pt
+    assert math.isclose(p.area(), reg_pol_area(5), abs_tol=0.4)
+
+    p.remove(3)
+    assert p.area() == -1
+
+    p.insert(original_pt, 3)
+    assert math.isclose(p.area(), reg_pol_area(5), abs_tol=0.4)
+
+
+def test_area_running_time():
+    p = Polygon()
+    total_area_calc_time = 0
+    for i, pt in enumerate(reg_polygon_helper(10000, 80)):
+        p.insert(pt, i)
+        t1 = time()
+        area = p.area()
+        total_area_calc_time += time() - t1
+    assert math.isclose(area, reg_pol_area(10000, 80), abs_tol=0.4)
+
+    assert total_area_calc_time < 0.1
 
 
 def test_large_polygon():
@@ -140,3 +184,4 @@ if __name__ == '__main__':
     pass
     # test_rotated_square()
     # test_regular_polygons()
+    test_area_running_time()
