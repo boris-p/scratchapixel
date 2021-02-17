@@ -115,6 +115,29 @@ def test_rotated_translated_pentagon():
     assert math.isclose(p.area(), reg_pol_area(5, 80), abs_tol=0.4)
 
 
+def test_cross():
+    # all edges are the same length and angles are 90/270
+    # making sure we don't count this as a regular polygon
+    p = Polygon()
+    pts = [(22.034284, 37.421484),
+           (26.526619, 39.616691),
+           (24.331412, 44.109025),
+           (19.839078, 41.913819),
+           (17.643871, 46.406153),
+           (13.151537, 44.210947),
+           (15.346743, 39.718612),
+           (10.854409, 37.523406),
+           (13.049615, 33.031071),
+           (17.54195, 35.226278),
+           (19.737156, 30.733943),
+           (24.22949, 32.92915)]
+
+    for i, pt in enumerate(pts):
+        p.insert(pt, i)
+
+    assert p.area() == -1
+
+
 def test_many_polygons():
     for i in range(3, 100):
         p = Polygon()
