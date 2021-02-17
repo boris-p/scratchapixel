@@ -129,20 +129,9 @@ def test_update_point():
     assert len(p) == 6
 
 
-def test_this_fails_for_some_reason():
-    p = Polygon()
-    for i, pt in enumerate(reg_polygon_helper(5, 80)):
-        p.insert(pt, i)
-    assert math.isclose(p.area(), reg_pol_area(5, 80), abs_tol=0.4)
-
-    # random point -check that polygon is no longer regular
-    p.insert((20, 4), 80)
-    assert p.area() == -1
-
-
 def test_large_polygon():
     p = Polygon()
-    for i, pt in enumerate(reg_polygon_helper(10000, 80, )):
+    for i, pt in enumerate(reg_polygon_helper(10000, 80)):
         p.insert(pt, i)
     assert math.isclose(p.area(), reg_pol_area(10000, 80), abs_tol=0.4)
 

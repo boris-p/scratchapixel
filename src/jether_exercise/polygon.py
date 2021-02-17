@@ -113,12 +113,16 @@ class Polygon:
             self.__edge_len(b, c, 'add')
             self.__edge_len(c, a, 'add')
         else:
+
             e = new_node
-            b = self.__prev(new_node)
+            b = self.__prev(e)
             a = self.__prev(b)
-            c = self.__next(new_node)
+            c = self.__next(e)
             d = self.__next(c)
 
+        # if self.__total_points == 3:
+        #     self.__edge_len(e, c, 'add')
+        # else:
             self.__angle_and_zproduct(a, b, c, 'remove')
             self.__angle_and_zproduct(b, c, d, 'remove')
             self.__edge_len(b, c, 'remove')
@@ -152,10 +156,33 @@ class Polygon:
         self.__total_points -= 1
 
         # update local polygon values for checking is a polygon is regular
+        if self.__total_points < 3:
+            # reset area calculation stores
+            self.__edges_len = dict()
+            self.__angles = dict()
+            self.__z_product_pos = 0
+            self.__z_product_neg = 0
+            return
+
+        e = curr_node
+        b = self.__prev(e)
+        a = self.__prev(b)
+        c = self.__next(e)
+        d = self.__next(c)
+
+        self.__angle_and_zproduct(a, b, e, 'remove')
+        self.__angle_and_zproduct(b, e, c, 'remove')
+        self.__angle_and_zproduct(e, c, d, 'remove')
+        self.__edge_len(b, e, 'remove')
+        self.__edge_len(e, c, 'remove')
+
+        self.__angle_and_zproduct(a, b, c, 'add')
+        self.__angle_and_zproduct(b, c, d, 'add')
+        self.__edge_len(b, c, 'add')
 
     def area(self):
         # we consider the polygon regular if all angles are the same size
-        # edges have the same length and its convex
+        # edges have the same length and it is convex
         if max(self.__z_product_neg, self.__z_product_pos) == self.__total_points and \
                 len(self.__edges_len) == 1 and len(self.__angles) == 1:
 
