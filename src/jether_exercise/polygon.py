@@ -45,7 +45,7 @@ def approximate(num):
 
 
 class Polygon:
-    # todo support adding points when initiating the class
+    # TODO support adding points when initiating the class
     def __init__(self):
         self.__head = None
         self.__tail = None
@@ -63,7 +63,7 @@ class Polygon:
         # used in checks for a regular polygon
         self.__angles = dict()
 
-        # check the convexity of polygon - used for checking the polygon is regular
+        # checking the convexity of polygon - used for checking the polygon is regular
         self.__z_product_pos = 0
         self.__z_product_neg = 0
 
@@ -74,33 +74,34 @@ class Polygon:
         # for now not doing checks that the index exists
         # probably should add logic that if index is too high add to the end
         new_node = Node(new_pt)
+
+        # first node
         if self.__head == None:
-            curr_node = new_node  # this should be called head, no?
+            self.__head = new_node
+            self.__tail = new_node
+            self.__total_points += 1
+            return
+
+        # adding last node
+        if ind >= self.__total_points:
+            last_node = self.__tail
+            last_node.next = new_node
+            new_node.prev = last_node
+            self.__tail = new_node
         else:
             curr_node = self.__head
-        # todo - add check for if we're outside the scope of the list
-        for _ in range(ind - 1):
-            curr_node = curr_node.next
+            for _ in range(ind):
+                curr_node = curr_node.next
 
-        # for _ in range(ind - 1):
-        #     curr_node = curr_node.next
+            prev_node = curr_node.prev
+            if prev_node:
+                prev_node.next = new_node
+                new_node.prev = prev_node
+            else:
+                self.__head = new_node
 
-        next_node = curr_node.next
-
-        if ind == self.__total_points:
-            self.__tail = new_node
-        if ind == 0:
             curr_node.prev = new_node
-            # if it's not the first element
-            if self.__head:
-                new_node.next = curr_node
-            self.__head = new_node
-        else:
-            curr_node.next = new_node
-            new_node.prev = curr_node
-            if next_node is not None:
-                new_node.next = next_node
-                next_node.prev = new_node
+            new_node.next = curr_node
 
         self.__total_points += 1
 
@@ -252,39 +253,43 @@ class Polygon:
 
     def __setitem__(self, ind, new_pt):
         self.__area = None
-        try:
-            # todo - handle exceptions and the like - if we're trying to add to an index that doesn't exist, if it's the first time we try to add
-            curr_node = self.__head
-            for _ in range(ind):
-                curr_node = curr_node.next
-
-            old_node = Node(curr_node.pt)
-            curr_node.pt = new_pt
-
-            # update local polygon values for checking if a polygon is regular
-            e = curr_node
-            b = self.__prev(e)
-            a = self.__prev(b)
-            c = self.__next(e)
-            d = self.__next(c)
-            self.__edge_len(b, old_node, 'remove')
-            self.__edge_len(old_node, c, 'remove')
-            self.__edge_len(b, e, 'add')
-            self.__edge_len(e, c, 'add')
-
-            self.__angle_and_zproduct(a, b, old_node, 'remove')
-            self.__angle_and_zproduct(b, old_node, c, 'remove')
-            self.__angle_and_zproduct(old_node, c, d, 'remove')
-            self.__angle_and_zproduct(a, b, e, 'add')
-            self.__angle_and_zproduct(b, e, c, 'add')
-            self.__angle_and_zproduct(e, c, d, 'add')
-        except:
+        if ind >= self.__total_points:
             raise PolygonIndexError(ind)
+
+        curr_node = self.__head
+        for _ in range(ind):
+            curr_node = curr_node.next
+
+        old_node = Node(curr_node.pt)
+        curr_node.pt = new_pt
+
+        if self.__total_points < 3:
+            return
+
+        # update local polygon values for checking if a polygon is regular
+        e = curr_node
+        b = self.__prev(e)
+        a = self.__prev(b)
+        c = self.__next(e)
+        d = self.__next(c)
+        self.__edge_len(b, old_node, 'remove')
+        self.__edge_len(old_node, c, 'remove')
+        self.__edge_len(b, e, 'add')
+        self.__edge_len(e, c, 'add')
+
+        self.__angle_and_zproduct(a, b, old_node, 'remove')
+        self.__angle_and_zproduct(b, old_node, c, 'remove')
+        self.__angle_and_zproduct(old_node, c, d, 'remove')
+        self.__angle_and_zproduct(a, b, e, 'add')
+        self.__angle_and_zproduct(b, e, c, 'add')
+        self.__angle_and_zproduct(e, c, d, 'add')
 
     def __getitem__(self, ind):
         # TODO - support negative values to access from the end
-        # TODO - i'm not handling errors well
         curr_node = self.__head
+
+        if not curr_node or ind >= self.__total_points:
+            raise PolygonIndexError(ind)
         for _ in range(ind):
             curr_node = curr_node.next
         return curr_node.pt

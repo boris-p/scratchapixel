@@ -2,7 +2,9 @@ import math
 from time import time
 from random import randint, random
 
-from src.jether_exercise.polygon import Polygon
+import pytest
+
+from src.jether_exercise.polygon import Polygon, PolygonIndexError
 
 
 def reg_polygon_helper(sides, radius=1, rotation=0, translation=None):
@@ -32,6 +34,16 @@ def test_new_polygon():
     assert len(p) == 0
 
 
+def test_get_item_that_does_not_exist_throws_error():
+    p = Polygon()
+    with pytest.raises(PolygonIndexError):
+        p[0]
+    p.insert((0, 3), 0)
+    assert p[0] == (0, 3)
+    with pytest.raises(PolygonIndexError):
+        p[1]
+
+
 def test_iterating_over_points():
     pts = [(7, 1), (16, 6), (11, 14), (3, 9)]
     p = Polygon()
@@ -51,8 +63,29 @@ def test_adding_2_points():
 
 
 def test_adding_removing_and_editing_points():
-    # todo
-    pass
+    expected_points = [(6, 6), (12, 6), (12, 12), (6, 12)]
+    p = Polygon()
+    p.insert((0, 0), 0)
+    p.insert((5, 2), 0)
+    p.remove(0)
+    p.remove(0)
+    p.insert((20, 7), 0)
+    p.insert((2, 3), 0)
+
+    for pt in p:
+        print(pt)
+    assert p.area() == -1
+
+    p[1] = (12, 12)
+    p.insert((6, 12), 2)
+    p.insert((6, 6), 0)
+    p[1] = (12, 6)
+
+    for i, pt in enumerate(p):
+        assert pt == expected_points[i]
+    assert len(p) == 4
+
+    assert math.isclose(p.area(), 36, abs_tol=0.4)
 
 
 def test_adding_removing_and_editing_points2():
@@ -205,6 +238,8 @@ def test_large_polygon():
     p = Polygon()
     for i, pt in enumerate(reg_polygon_helper(10000, 80)):
         p.insert(pt, i)
+
+    assert len(p) == 10000
     assert math.isclose(p.area(), reg_pol_area(10000, 80), abs_tol=0.4)
 
 
@@ -212,4 +247,4 @@ if __name__ == '__main__':
     pass
     # test_rotated_square()
     # test_regular_polygons()
-    test_area_running_time()
+    test_large_polygon()
