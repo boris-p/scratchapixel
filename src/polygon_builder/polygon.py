@@ -1,18 +1,12 @@
 import math
 
 
-ROUND_DECIMALS = 10 ** 6
+ROUND_DECIMALS = 10 ** 7
 
 
 class PolygonIndexError(Exception):
     def __init__(self, ind):
         self.message = f'Polygon index at: {ind} out of range'
-        super().__init__(self.message)
-
-
-class PolygonRemoveIndexError(Exception):
-    def __init__(self, ind, len):
-        self.message = f'trying to remove element with index {ind} from a polygon with length {len}'
         super().__init__(self.message)
 
 
@@ -71,8 +65,7 @@ class Polygon:
 
         self.__area = None
         # if this is the first element init the head with the element
-        # for now not doing checks that the index exists
-        # probably should add logic that if index is too high add to the end
+        # TODO: for now not doing checks that the index exists
         new_node = Node(new_pt)
 
         # first node
@@ -89,10 +82,7 @@ class Polygon:
             new_node.prev = last_node
             self.__tail = new_node
         else:
-            curr_node = self.__head
-            for _ in range(ind):
-                curr_node = curr_node.next
-
+            curr_node = self.__get_curr_node(ind)
             prev_node = curr_node.prev
             if prev_node:
                 prev_node.next = new_node
@@ -132,11 +122,7 @@ class Polygon:
     def remove(self, ind):
         self.__area = None
 
-        if ind >= self.__total_points:
-            raise PolygonRemoveIndexError(ind, self.__total_points)
-        curr_node = self.__head
-        for _ in range(ind):
-            curr_node = curr_node.next
+        curr_node = self.__get_curr_node(ind)
 
         if curr_node.prev:
             curr_node.prev.next = curr_node.next
@@ -199,7 +185,26 @@ class Polygon:
             self.__area = None
             return -1
 
+    def __get_curr_node(self, ind):
+        # though finding a point is happening in linear time (0(n)), depending on
+        # how the polygon class is used,  i.e - accessed mostly at the beginning or
+        # the end this could make a difference in terms of usability
+
+        curr_node = self.__head
+        if not curr_node or ind >= self.__total_points:
+            raise PolygonIndexError(ind)
+
+        if ind < self.__total_points / 2:
+            for _ in range(ind):
+                curr_node = curr_node.next
+        else:
+            curr_node = self.__tail
+            for _ in range(self.__total_points - ind - 1):
+                curr_node = curr_node.prev
+        return curr_node
+
     # get prev node (if index is 0 return the last)
+
     def __prev(self, node):
         return node.prev if node.prev else self.__tail
 
@@ -214,6 +219,7 @@ class Polygon:
         ang = math.degrees(math.atan2(
             c[1]-b[1], c[0]-b[0]) - math.atan2(a[1]-b[1], a[0]-b[0]))
         ang = ang + 360 if ang < 0 else ang
+        print("ang is", ang)
         ang = approximate(ang)
 
         z_cross_product_pos = ((a[0]-b[0])*(b[1]-c[1]) -
@@ -253,13 +259,7 @@ class Polygon:
 
     def __setitem__(self, ind, new_pt):
         self.__area = None
-        if ind >= self.__total_points:
-            raise PolygonIndexError(ind)
-
-        curr_node = self.__head
-        for _ in range(ind):
-            curr_node = curr_node.next
-
+        curr_node = self.__get_curr_node(ind)
         old_node = Node(curr_node.pt)
         curr_node.pt = new_pt
 
@@ -286,13 +286,7 @@ class Polygon:
 
     def __getitem__(self, ind):
         # TODO - support negative values to access from the end
-        curr_node = self.__head
-
-        if not curr_node or ind >= self.__total_points:
-            raise PolygonIndexError(ind)
-        for _ in range(ind):
-            curr_node = curr_node.next
-        return curr_node.pt
+        return self.__get_curr_node(ind).pt
 
     def __len__(self):
         return self.__total_points

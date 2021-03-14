@@ -25,10 +25,7 @@ print("as recursive method")
 
 
 def rec_fibonacci(num: int):
-    if (num <= 1):
-        return num
-    else:
-        return rec_fibonacci(num - 1) + rec_fibonacci(num - 2)
+    return num if num <= 1 else rec_fibonacci(num - 1) + rec_fibonacci(num - 2)
 
 
 print(rec_fibonacci(35))

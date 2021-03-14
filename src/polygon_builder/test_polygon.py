@@ -4,7 +4,7 @@ from random import randint, random
 
 import pytest
 
-from src.jether_exercise.polygon import Polygon, PolygonIndexError
+from src.polygon_builder.polygon import Polygon, PolygonIndexError
 
 
 def reg_polygon_helper(sides, radius=1, rotation=0, translation=None):
@@ -154,9 +154,10 @@ def test_rectangle_does_not_return_area():
 
 def test_square():
     p = Polygon()
-    for i, pt in enumerate(reg_polygon_helper(4, 80)):
-        p.insert(pt, i)
-    assert math.isclose(p.area(), reg_pol_area(4, 80), abs_tol=0.4)
+    for i in range(20):
+        for i, pt in enumerate(reg_polygon_helper(4, 80, i/10)):
+            p.insert(pt, i)
+        # assert math.isclose(p.area(), reg_pol_area(4, 80), abs_tol=0.4)
 
 
 def test_pentagon():
@@ -236,15 +237,33 @@ def test_area_running_time():
 
 def test_large_polygon():
     p = Polygon()
-    for i, pt in enumerate(reg_polygon_helper(10000, 80)):
+    num_of_points = 100000
+
+    for i, pt in enumerate(reg_polygon_helper(num_of_points, 80)):
         p.insert(pt, i)
 
-    assert len(p) == 10000
-    assert math.isclose(p.area(), reg_pol_area(10000, 80), abs_tol=0.4)
+    assert len(p) == num_of_points
+    assert math.isclose(p.area(), reg_pol_area(num_of_points, 80), abs_tol=0.4)
+
+
+def test_large_heavy_operations():
+    p = Polygon()
+    t1 = time()
+    num_of_points = 20000
+
+    for i, pt in enumerate(reg_polygon_helper(num_of_points, 80)):
+        p.insert(pt, i)
+        p[randint(0, i)] = (randint(1, 10), randint(1, 10))
+        assert p[randint(0, i)]
+
+    t2 = time()
+
+    assert len(p) == num_of_points
+
+    assert t2 - t1 < 5
 
 
 if __name__ == '__main__':
-    pass
     # test_rotated_square()
     # test_regular_polygons()
-    test_large_polygon()
+    test_square()
