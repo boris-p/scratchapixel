@@ -45,7 +45,7 @@ b = a[:2, 1:3]
 
 print('sliced array', b)
 
-# we can also use integet indexes but that will yeald an array of a lower rank
+# we can also use integet indexes but that will yeild an array of a lower rank
 second_row_rank_1 = a[1, :]
 print('second row rank 1', second_row_rank_1)
 
