@@ -1,4 +1,4 @@
-# write a function that takes in a targetSum and an array of numbers sa arguments
+# write a function that takes in a targetSum and an array of numbers as arguments
 # the function should return the values to sum if they exist (any option is ok, don't need all of them)
 # we may use an element in the array as many times as needed and assume that all inputs are nonnegative
 
