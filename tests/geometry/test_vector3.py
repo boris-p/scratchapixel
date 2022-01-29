@@ -19,7 +19,6 @@ def test_duplicate():
 
 def test_vector_length():
     vec = Vector3(1, 1, 1)
-    math.isclose()
     assert math.isclose(vec.length(), 1.732,  abs_tol=1e-03)
 
 

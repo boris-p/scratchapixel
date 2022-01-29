@@ -1,4 +1,5 @@
 {
+  "python.envFile": "/Users/borispl/personal/scratchapixel/.env",
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "python.testing.unittestEnabled": false,
@@ -8,16 +9,16 @@
   "editor.formatOnSave": true,
   "python.linting.flake8Enabled": false,
   "python.autoComplete.extraPaths": [
-    "/home/boris/projects/personal/scratchpixel"
+    "/Users/borispl/personal/scratchapixel"
   ],
-  "python.linting.pylintPath": "/home/boris/projects/personal/scratchpixel/env/bin/pylint",
+  "python.linting.pylintPath": "/Users/borispl/personal/scratchapixel/env/bin/pylint",
   "python.testing.pytestArgs": ["tests"],
   "files.exclude": {
     "\"**/*.pyc\": {\"when\": \"$(basename).py\"}, ": true,
     "**/__pycache__": true
   },
   "python.analysis.extraPaths": [
-    "/home/boris/projects/personal/scratchpixel"
+    "/Users/borispl/personal/scratchapixel"
   ],
   "python.analysis.typeCheckingMode": "basic"
 }
