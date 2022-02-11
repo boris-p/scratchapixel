@@ -20,5 +20,8 @@
   "python.analysis.extraPaths": [
     "/Users/borispl/personal/scratchapixel"
   ],
-  "python.analysis.typeCheckingMode": "basic"
+  "python.analysis.typeCheckingMode": "basic",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

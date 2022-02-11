@@ -1,0 +1,1575 @@
+{
+    nodes: [
+        {
+        key: 'MDQ6VXNlcjc2MTY1MTU3',
+        attributes: {
+          name: 'omer-cider',
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          id: 'MDQ6VXNlcjc2MTY1MTU3',
+          family: 'SCM',
+          type: 'SCMUser',
+            },
+        },
+        {
+        key: 'MDQ6VXNlcjc2NDg4OTg4',
+        attributes: {
+          name: 'daniel-cider',
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          id: 'MDQ6VXNlcjc2NDg4OTg4',
+          family: 'SCM',
+          type: 'SCMUser',
+            },
+        },
+        {
+        key: 'MDQ6VXNlcjgwNTk5Njk3',
+        attributes: {
+          name: 'leoncider',
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          id: 'MDQ6VXNlcjgwNTk5Njk3',
+          family: 'SCM',
+          type: 'SCMUser',
+            },
+        },
+        {
+        key: 'MDQ6VXNlcjgzOTAyNDUw',
+        attributes: {
+          name: 'yaelgith',
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          id: 'MDQ6VXNlcjgzOTAyNDUw',
+          family: 'SCM',
+          type: 'SCMUser',
+            },
+        },
+        {
+        key: 'MDQ6VXNlcjg4MjcwMzUx',
+        attributes: {
+          name: 'asi-cider',
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          id: 'MDQ6VXNlcjg4MjcwMzUx',
+          family: 'SCM',
+          type: 'SCMUser',
+            },
+        },
+        {
+        key: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: {
+          repoId: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+          numberOfLines: 217,
+          defaultBranch: 'main',
+          fullName: 'cider-research/research',
+          type: 'SCMAnalyzedRepoV2',
+          repositorySize: 548,
+          ciFiles: [
+            '/shared/cloned_repos/github.com/cider-research/1640852767022/research/.circleci/config.yml',
+            '/shared/cloned_repos/github.com/cider-research/1640852767022/research/Jenkinsfile',
+            '/shared/cloned_repos/github.com/cider-research/1640852767022/research/Jenkinsfile2',
+            '/shared/cloned_repos/github.com/cider-research/1640852767022/research/backup/Jenkinsfile.bck',
+            '/shared/cloned_repos/github.com/cider-research/1640852767022/research/backup/Jenkinsfile.bck.git_push',
+                ],
+          lastUpdated: '2021-12-28T14: 48: 06Z',
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          privacyLevel: 'private',
+          provider: 'GITHUB',
+          name: 'research',
+          id: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+          family: 'SCM',
+          workspaceId: '617046d05536520011101ca5',
+            },
+        },
+        {
+        key: '95acefa4-0c8c-4026-bb9b-6d8129d1b8e5',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          repoId: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+          path: '/shared/cloned_repos/github.com/cider-research/1640852767022/research/Jenkinsfile',
+          name: 'Jenkinsfile',
+          id: '95acefa4-0c8c-4026-bb9b-6d8129d1b8e5',
+          family: 'SCM',
+          type: 'SCMCiManifest',
+            },
+        },
+        {
+        key: 'MDQ6VXNlcjc4OTAzNTc3',
+        attributes: {
+          name: 'rotem-cider',
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          id: 'MDQ6VXNlcjc4OTAzNTc3',
+          family: 'SCM',
+          type: 'SCMUser',
+            },
+        },
+        {
+        key: 'MDQ6VXNlcjg5NTIxMzM3',
+        attributes: {
+          name: 'CiderSecurityIT',
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          id: 'MDQ6VXNlcjg5NTIxMzM3',
+          type: 'SCMUser',
+          family: 'SCM',
+            },
+        },
+        {
+        key: 'add41efa-670e-489a-ba44-916d22290c78',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'Research-Jenkins-1711',
+          id: 'add41efa-670e-489a-ba44-916d22290c78',
+          type: 'CIInstance',
+          family: 'CI',
+          url: 'https: //35.160.69.81:8080/',
+          ciType: 'jenkins',
+            },
+        },
+        {
+        key: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: '2pub-test',
+          trigger: 'webhook',
+          id: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+          family: 'CI',
+          type: 'CIPipeline',
+          ciType: 'jenkins',
+            },
+        },
+        {
+        key: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'pub3',
+          id: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+          trigger: 'webhook',
+          type: 'CIPipeline',
+          family: 'CI',
+          ciType: 'jenkins',
+            },
+        },
+        {
+        key: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'my-pub-repo',
+          trigger: 'webhook',
+          id: '2374fd97-4f89-4312-92b1-fbff5661910e',
+          family: 'CI',
+          type: 'CIPipeline',
+          ciType: 'jenkins',
+            },
+        },
+        {
+        key: '4f68b761-88cd-426c-a881-7589890368ab',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'public_pipeline',
+          trigger: 'webhook',
+          id: '4f68b761-88cd-426c-a881-7589890368ab',
+          family: 'CI',
+          type: 'CIPipeline',
+          ciType: 'jenkins',
+            },
+        },
+        {
+        key: 'd8236554-d6aa-4581-87db-436918a802d3',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'dockerhub',
+          description: 'Dockerhub Credentials',
+          id: 'd8236554-d6aa-4581-87db-436918a802d3',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '3d296dfe-9dc5-4646-a115-3a509d19e583',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'Omer_Github_Releases',
+          description: 'Omer Github Releases',
+          id: '3d296dfe-9dc5-4646-a115-3a509d19e583',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '07958054-936d-40bb-bf06-fcda37cdfd79',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'my_id',
+          description: '',
+          id: '07958054-936d-40bb-bf06-fcda37cdfd79',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: 'd114ad75-5e4a-41bc-b9c4-364cba643b18',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'dsadasdas',
+          description: 'dsadasdasdas',
+          id: 'd114ad75-5e4a-41bc-b9c4-364cba643b18',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '4bec7330-8b1b-4e81-b617-b8e7ff56c502',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'leon_creds_id',
+          description: 'leon_creds_desc',
+          id: '4bec7330-8b1b-4e81-b617-b8e7ff56c502',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '2e307a0f-98fa-4d3d-a779-09c5d8584f52',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'my_docker_creds',
+          description: '',
+          id: '2e307a0f-98fa-4d3d-a779-09c5d8584f52',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: 'c5e32312-f3d6-400e-93d4-57fb0a070f0d',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'Github-jenkins',
+          description: '',
+          id: 'c5e32312-f3d6-400e-93d4-57fb0a070f0d',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: 'a4076c22-e7b1-4587-ac82-5d38e2f79c55',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'test-credentials-1',
+          description: '',
+          id: 'a4076c22-e7b1-4587-ac82-5d38e2f79c55',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: 'ddfcdfad-b74b-4009-9059-43f278218436',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'system-cred',
+          description: '',
+          id: 'ddfcdfad-b74b-4009-9059-43f278218436',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '23490737-e802-4d1e-a77c-1ea5034249d9',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'jenkins-python2',
+          description: '',
+          id: '23490737-e802-4d1e-a77c-1ea5034249d9',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: 'c452a4d3-55c8-48c9-b204-c46a92eb5407',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'sys username and pass',
+          description: '',
+          id: 'c452a4d3-55c8-48c9-b204-c46a92eb5407',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '7d10ee68-f201-4b27-8e3e-0da1b64b6129',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'global username+pas',
+          description: '',
+          id: '7d10ee68-f201-4b27-8e3e-0da1b64b6129',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '131577bb-f8cb-4ec8-a869-4d767aabdf1f',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'gitlabapiglob',
+          description: '',
+          id: '131577bb-f8cb-4ec8-a869-4d767aabdf1f',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '91605017-64e7-414b-9b63-f43e5d9ea029',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'githubapp',
+          description: 'vv',
+          id: '91605017-64e7-414b-9b63-f43e5d9ea029',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: 'd8e64017-46cb-49a5-a901-2bdb9d2e9652',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'SYSsecretfile',
+          description: '',
+          id: 'd8e64017-46cb-49a5-a901-2bdb9d2e9652',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: 'b79fe3e6-e796-43e2-9843-40ef0a8fb09f',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'secretfileglob',
+          description: '',
+          id: 'b79fe3e6-e796-43e2-9843-40ef0a8fb09f',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: 'a018aebe-b75c-4cf1-82ad-20c84f290c6f',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'SYS client cert',
+          description: '',
+          id: 'a018aebe-b75c-4cf1-82ad-20c84f290c6f',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '25d85766-ba7a-4e36-a391-2db5c196b05e',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'secrettextSYS',
+          description: '',
+          id: '25d85766-ba7a-4e36-a391-2db5c196b05e',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '84b956f2-8323-469c-abb2-5c00a429d1e2',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'new',
+          description: '',
+          id: '84b956f2-8323-469c-abb2-5c00a429d1e2',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '383583c8-0714-4872-8cff-0acfa2b89be8',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'SYS cert',
+          description: '',
+          id: '383583c8-0714-4872-8cff-0acfa2b89be8',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: '6370f34d-d18a-4ddb-bba6-84578d25ff41',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: '33b9e633-544e-448f-8b8b-b88972bb3d0c',
+          description: '',
+          id: '6370f34d-d18a-4ddb-bba6-84578d25ff41',
+          family: 'CI',
+          type: 'CIGlobalCredentials',
+            },
+        },
+        {
+        key: '25fa5223-9f40-49f0-a071-1cc71e529983',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'wowwow',
+          description: '',
+          id: '25fa5223-9f40-49f0-a071-1cc71e529983',
+          type: 'CIGlobalCredentials',
+          family: 'CI',
+            },
+        },
+        {
+        key: 'b438cb7b-ff2e-4416-82c0-a9af4aa14aee',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          repoId: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+          path: '/shared/cloned_repos/github.com/cider-research/1640852767022/research/Jenkinsfile2',
+          name: 'Jenkinsfile2',
+          id: 'b438cb7b-ff2e-4416-82c0-a9af4aa14aee',
+          family: 'SCM',
+          type: 'SCMCiManifest',
+            },
+        },
+        {
+        key: 'BPR_kwDOE0HLS84BZNnd',
+        attributes: {
+          repoId: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+          restrictsPushes: false,
+          isAdminEnforced: false,
+          type: 'SCMBranchProtectionRule',
+          allowsForcePushes: false,
+          requiresApprovingReviews: true,
+          requiresStatusChecks: false,
+          requiresCodeOwnerReviews: true,
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          requiredApprovingReviewCount: 0,
+          name: '23386589',
+          id: 'BPR_kwDOE0HLS84BZNnd',
+          family: 'SCM',
+          databaseId: 23386589,
+          requiresCommitSignatures: false,
+            },
+        },
+        {
+        key: 'e56d82e2-122f-4b66-87c7-84733cd478f0',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          name: 'actions-workflow-test2',
+          id: 'e56d82e2-122f-4b66-87c7-84733cd478f0',
+          type: 'SCMFilter',
+          family: 'SCM',
+          value: 'actions-workflow-test2',
+          algorithm: 'fnmatch',
+            },
+        },
+        {
+        key: 'e12de580-af43-4c39-8399-448f484e85dc',
+        attributes: {
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          instanceId: 'add41efa-670e-489a-ba44-916d22290c78',
+          name: 'research',
+          trigger: 'webhook',
+          id: 'e12de580-af43-4c39-8399-448f484e85dc',
+          family: 'CI',
+          type: 'CIPipeline',
+          ciType: 'jenkins',
+            },
+        },
+    ],
+    edges: [
+        {
+        key: '720dd7608e41a1f8edd8ae4ebc2b1f839f470602',
+        source: 'MDQ6VXNlcjc2MTY1MTU3',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'can open a pull request'
+            },
+        },
+        {
+        key: '0edb08fcf619969b643b5e09576ddc3467b337cd',
+        source: 'MDQ6VXNlcjc2NDg4OTg4',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'can open a pull request'
+            },
+        },
+        {
+        key: '315d684a62ff4888b360303cd4f4815660b0c76e',
+        source: 'MDQ6VXNlcjg5NTIxMzM3',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'can open a pull request'
+            },
+        },
+        {
+        key: 'd858dbe54438baba052c7fd515759d2eb1ff9eea',
+        source: 'MDQ6VXNlcjgzOTAyNDUw',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'can open a pull request'
+            },
+        },
+        {
+        key: 'ca545216adc26af317e72a92ca236eb3cccdd605',
+        source: 'MDQ6VXNlcjg4MjcwMzUx',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'can open a pull request'
+            },
+        },
+        {
+        key: '9992f161d98e0f8c9bc0ecbcb5c192d5bfe251c0',
+        source: 'MDQ6VXNlcjc4OTAzNTc3',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'can open a pull request'
+            },
+        },
+        {
+        key: '77c27e5b985ea055e20cee53e63cc99076632be5',
+        source: 'MDQ6VXNlcjgwNTk5Njk3',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'can open a pull request'
+            },
+        },
+        {
+        key: '6357af1b39bb43f006016c004b75188f7ffa8341',
+        source: 'MDQ6VXNlcjgwNTk5Njk3',
+        target: 'e56d82e2-122f-4b66-87c7-84733cd478f0',
+        attributes: { relType: 'can push directly to'
+            },
+        },
+        {
+        key: 'd3d88f249fec1d2c50cb6d011a44815fbbc6f031',
+        source: 'MDQ6VXNlcjgzOTAyNDUw',
+        target: 'e56d82e2-122f-4b66-87c7-84733cd478f0',
+        attributes: { relType: 'can push directly to'
+            },
+        },
+        {
+        key: '26932240c326f4d8dffbb329763cb475ba63f916',
+        source: 'MDQ6VXNlcjg5NTIxMzM3',
+        target: 'e56d82e2-122f-4b66-87c7-84733cd478f0',
+        attributes: { relType: 'can push directly to'
+            },
+        },
+        {
+        key: '47a0d4ea5b62b80ff66e5299f95537c6635d15f6',
+        source: 'MDQ6VXNlcjc2MTY1MTU3',
+        target: 'e56d82e2-122f-4b66-87c7-84733cd478f0',
+        attributes: { relType: 'can push directly to'
+            },
+        },
+        {
+        key: '3f9e0e5901c4096a10b3c23dd904cd1e41724757',
+        source: 'MDQ6VXNlcjg4MjcwMzUx',
+        target: 'e56d82e2-122f-4b66-87c7-84733cd478f0',
+        attributes: { relType: 'can push directly to'
+            },
+        },
+        {
+        key: '285115fe264ce5900880ba653799c06a8ba63ccc',
+        source: 'MDQ6VXNlcjc4OTAzNTc3',
+        target: 'e56d82e2-122f-4b66-87c7-84733cd478f0',
+        attributes: { relType: 'can push directly to'
+            },
+        },
+        {
+        key: 'ad697461d052527bf37868713576a32b96e354a5',
+        source: 'MDQ6VXNlcjc2NDg4OTg4',
+        target: 'e56d82e2-122f-4b66-87c7-84733cd478f0',
+        attributes: { relType: 'can push directly to'
+            },
+        },
+        {
+        key: 'af3d31b33b14c3f4913803bcb63fc7e9b1192bd3',
+        source: 'MDQ6VXNlcjgwNTk5Njk3',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'push to unprotected branch'
+            },
+        },
+        {
+        key: '574710d9657816f2fa8672a913197dcfe810174c',
+        source: 'MDQ6VXNlcjg5NTIxMzM3',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'push to unprotected branch'
+            },
+        },
+        {
+        key: '407a27c95fd59e9fce478ebcd7ce06622324270a',
+        source: 'MDQ6VXNlcjg4MjcwMzUx',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'push to unprotected branch'
+            },
+        },
+        {
+        key: '5e8a48beb7cd83c25ce3c03342591e43c9eb4509',
+        source: 'MDQ6VXNlcjc2NDg4OTg4',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'push to unprotected branch'
+            },
+        },
+        {
+        key: 'f62edc9447abecb005d2fc88b8e3c1c8284d0c81',
+        source: 'MDQ6VXNlcjc2MTY1MTU3',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'push to unprotected branch'
+            },
+        },
+        {
+        key: '2795c5aa2f065160084944e7f761b3f6f12dbb33',
+        source: 'MDQ6VXNlcjc4OTAzNTc3',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'push to unprotected branch'
+            },
+        },
+        {
+        key: '79010962f2a3cff1865b026b9da95e4198c41d63',
+        source: 'MDQ6VXNlcjgzOTAyNDUw',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'push to unprotected branch'
+            },
+        },
+        {
+        key: '2223e30250f405ada7d39bab6782a7b15495e3ef',
+        source: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        target: 'add41efa-670e-489a-ba44-916d22290c78',
+        attributes: {
+          relType: 'webhook',
+          repoId: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          name: 'web',
+          id: '289335905',
+          type: 'SCMWebhook',
+          family: 'SCM',
+          triggers: ['create'
+                ],
+          url: 'http: //35.160.69.81:8080/j_acegi_security_check',
+          webhookType: 'Repository',
+            },
+        },
+        {
+        key: '922ed2fa23d63fc1b846958bb2c3c85a602a5e65',
+        source: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        target: 'add41efa-670e-489a-ba44-916d22290c78',
+        attributes: {
+          relType: 'webhook',
+          repoId: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+          accountId: 'ca550690-af94-4b20-8d73-ed2d4a487fea',
+          name: 'web',
+          id: '273284643',
+          type: 'SCMWebhook',
+          family: 'SCM',
+          triggers: ['pull_request', 'push'
+                ],
+          url: 'http: //35.160.69.81:8080/github-webhook/',
+          webhookType: 'Repository',
+            },
+        },
+        {
+        key: '31742de245a635a33f320873265416a95baaab33',
+        source: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        target: '95acefa4-0c8c-4026-bb9b-6d8129d1b8e5',
+        attributes: { relType: 'contains'
+            },
+        },
+        {
+        key: 'e8fe27bc26447618281fd17f190e223059e7cc8d',
+        source: '95acefa4-0c8c-4026-bb9b-6d8129d1b8e5',
+        target: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        attributes: { relType: 'defines'
+            },
+        },
+        {
+        key: '51a64b2b04c3afb3ceb2caf09625cceddd93aa1e',
+        source: '95acefa4-0c8c-4026-bb9b-6d8129d1b8e5',
+        target: '4f68b761-88cd-426c-a881-7589890368ab',
+        attributes: { relType: 'defines'
+            },
+        },
+        {
+        key: '19bf0a9aa17195ecacc9e259809ce11c4d930e38',
+        source: '95acefa4-0c8c-4026-bb9b-6d8129d1b8e5',
+        target: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        attributes: { relType: 'defines'
+            },
+        },
+        {
+        key: '9128e14caf1ae64cbbe83ff69ed1163f829a7958',
+        source: '95acefa4-0c8c-4026-bb9b-6d8129d1b8e5',
+        target: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        attributes: { relType: 'defines'
+            },
+        },
+        {
+        key: '3c836714bc27b1d23c02860e396a77d71a2d8e0a',
+        source: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        target: 'b438cb7b-ff2e-4416-82c0-a9af4aa14aee',
+        attributes: { relType: 'contains'
+            },
+        },
+        {
+        key: '7f57322f4eca299f5f213fd2029001498898cc40',
+        source: 'b438cb7b-ff2e-4416-82c0-a9af4aa14aee',
+        target: 'e12de580-af43-4c39-8399-448f484e85dc',
+        attributes: { relType: 'defines'
+            },
+        },
+        {
+        key: '34e230764c2371a0c710a0ebcea75a8e188e8155',
+        source: 'add41efa-670e-489a-ba44-916d22290c78',
+        target: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        attributes: {
+          relType: 'triggers',
+          algorithm: 'regex',
+          patterns: ['.*'
+                ],
+            },
+        },
+        {
+        key: '3029f3a88547ab5057752134041667801465f6d0',
+        source: 'add41efa-670e-489a-ba44-916d22290c78',
+        target: '4f68b761-88cd-426c-a881-7589890368ab',
+        attributes: {
+          relType: 'triggers',
+          algorithm: 'regex',
+          patterns: ['.*'
+                ],
+            },
+        },
+        {
+        key: '44859bc1c801ea4f70226f6ed2e90ccddf9543f3',
+        source: 'add41efa-670e-489a-ba44-916d22290c78',
+        target: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        attributes: {
+          relType: 'triggers',
+          algorithm: 'regex',
+          patterns: ['.*'
+                ],
+            },
+        },
+        {
+        key: 'a5a44b63c6a9ec0035e227025d07437981cbac09',
+        source: 'add41efa-670e-489a-ba44-916d22290c78',
+        target: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        attributes: {
+          relType: 'triggers',
+          algorithm: 'regex',
+          patterns: ['.*'
+                ],
+            },
+        },
+        {
+        key: '0c799882827c60668990038670cd4c7c88c5c508',
+        source: 'add41efa-670e-489a-ba44-916d22290c78',
+        target: 'e12de580-af43-4c39-8399-448f484e85dc',
+        attributes: {
+          relType: 'triggers',
+          algorithm: 'wildcard',
+          include: ['main PR-*'
+                ],
+          exclude: [],
+            },
+        },
+        {
+        key: '36e2f98881edab9167593e5933486d2a04c2f8c9',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '23490737-e802-4d1e-a77c-1ea5034249d9',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'ec433c07020fdaa7a92eacc23e1508f01940286d',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: 'ddfcdfad-b74b-4009-9059-43f278218436',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '033dd0446c98fd5626d6e3321f7ab7fb22e81e0c',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: 'a4076c22-e7b1-4587-ac82-5d38e2f79c55',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '990f8bcb2ed5615ebc45968ee8c303fddc22be30',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '4bec7330-8b1b-4e81-b617-b8e7ff56c502',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '971dfe321f3a0dc3664ab3df87b9528cddb957d3',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '07958054-936d-40bb-bf06-fcda37cdfd79',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '2d377b3e506b2432a7fc9d8f1436e44fa4b1a29c',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: 'd114ad75-5e4a-41bc-b9c4-364cba643b18',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'ab645f3d3c80962afc3f59d076c0671b80601bb1',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '2e307a0f-98fa-4d3d-a779-09c5d8584f52',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '88cc54a3a085ff6e46493b48b507b66d421f93a5',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: 'c5e32312-f3d6-400e-93d4-57fb0a070f0d',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '09e28de4804d5a283139ea1bcdbd419fd270d423',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '3d296dfe-9dc5-4646-a115-3a509d19e583',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'f7f9c4eaa30c2257b9f4ec477de87cd1ac36d0d8',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: 'd8236554-d6aa-4581-87db-436918a802d3',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'a8d99685bbcf4a1ab300067b605fece7a690d96c',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '25fa5223-9f40-49f0-a071-1cc71e529983',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'c3d455aeff883163e093db9bbf9056373ea6bca4',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '84b956f2-8323-469c-abb2-5c00a429d1e2',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '74cf0cf952be33911e7b257d9312d7c7d3946509',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '6370f34d-d18a-4ddb-bba6-84578d25ff41',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'c67234ef22a5062b453ee91c8c429c9127a98cfa',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: 'c452a4d3-55c8-48c9-b204-c46a92eb5407',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '8ace7a2aa6b66a4e806f0aed8c9c04a83f0b3b09',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '7d10ee68-f201-4b27-8e3e-0da1b64b6129',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'c96921e83c6bd068e56dabfa3eae2d2aa6fac0fd',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '25d85766-ba7a-4e36-a391-2db5c196b05e',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '72b24b597b2fb88ce18a89eb81b6b314609ac747',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: 'd8e64017-46cb-49a5-a901-2bdb9d2e9652',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '2f151249a926812d9186a8c63e6c89dc7f1c5409',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '383583c8-0714-4872-8cff-0acfa2b89be8',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '3095eed18f314ca64b2681d0780300ef21680cea',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: 'a018aebe-b75c-4cf1-82ad-20c84f290c6f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '5a3ec8aa30ada3af5609c0aae08d19a88e34f327',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '91605017-64e7-414b-9b63-f43e5d9ea029',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '04f96c007d124132bf1e076ec75765ae0493b674',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: 'b79fe3e6-e796-43e2-9843-40ef0a8fb09f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '5665873b2a6cbbe08c1c2c234a5987f983a6f8ed',
+        source: '1bb05ffc-5b92-4602-a58a-f3440b4c2bcc',
+        target: '131577bb-f8cb-4ec8-a869-4d767aabdf1f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '99ed302214b9daebd025c23070f2e906ac06f3a1',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '91605017-64e7-414b-9b63-f43e5d9ea029',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'fb24be66e94743902ed853f730922e5ab0946b0a',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: 'c452a4d3-55c8-48c9-b204-c46a92eb5407',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '0dc226e1ef2924215eb828cd0244621dcee885c7',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: 'b79fe3e6-e796-43e2-9843-40ef0a8fb09f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '9ecbda26d0726b5a274a80e06b070fd2bcb48204',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '131577bb-f8cb-4ec8-a869-4d767aabdf1f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '4ae07263f40355137f943f8c9b9942016fa62752',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '23490737-e802-4d1e-a77c-1ea5034249d9',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '31823d256a7021f54a174e2eada5a9164cc018df',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: 'c5e32312-f3d6-400e-93d4-57fb0a070f0d',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'a65b2889ca3d762a2e6f5269c862c769c1f861bf',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '7d10ee68-f201-4b27-8e3e-0da1b64b6129',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '603307241e9e598dd4c9ef301e7c96fefdf8a589',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: 'ddfcdfad-b74b-4009-9059-43f278218436',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '7975cf0b0cfd41d5e553e508e8e97bbf83226245',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '25fa5223-9f40-49f0-a071-1cc71e529983',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'e3fa64370011306179f68ea2d4eef55d0c178f35',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '84b956f2-8323-469c-abb2-5c00a429d1e2',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '8f27f9bbee99a847cee65d53087a394625fd79a4',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '6370f34d-d18a-4ddb-bba6-84578d25ff41',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'fc8334346c1df95f87ea25f716dc62044bf4abea',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '25d85766-ba7a-4e36-a391-2db5c196b05e',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '1bd276ad713f4c047e4be726af6668147f76392f',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: 'd8e64017-46cb-49a5-a901-2bdb9d2e9652',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '9d6aaa41287417775672dc18c9caf28bcc3f594d',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '383583c8-0714-4872-8cff-0acfa2b89be8',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '05e82980e71485da7677de40ef49606f0cc71100',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: 'a018aebe-b75c-4cf1-82ad-20c84f290c6f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '276ac27e8a19f9713ddcef21c7a52a957986218d',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '2e307a0f-98fa-4d3d-a779-09c5d8584f52',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '1598fdc4ec8ed7cf67719c4906b8a9640d32b64f',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '07958054-936d-40bb-bf06-fcda37cdfd79',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'dd74722833300281a3a119edf5545caecc5ac3b4',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: 'a4076c22-e7b1-4587-ac82-5d38e2f79c55',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '8585d55678bcfb4ad6c0a2d02291aa9186f9bbe0',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '4bec7330-8b1b-4e81-b617-b8e7ff56c502',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '3dfae2921e6f3285ec4e9bd336be4e2e6b922f06',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: 'd8236554-d6aa-4581-87db-436918a802d3',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'a68eec546d5506acf49c1f935d4384fc71d3008c',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: 'd114ad75-5e4a-41bc-b9c4-364cba643b18',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'fe6fb47918c53b24da16dd28e3022a6a047f441f',
+        source: 'eac38d71-c764-459b-a7d5-9958e9d7572c',
+        target: '3d296dfe-9dc5-4646-a115-3a509d19e583',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '21780c07416964d182c304812c63d1ea67a0445c',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '383583c8-0714-4872-8cff-0acfa2b89be8',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '673ba89e66950bcbcb7700f966eb1c4ad02f1f74',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: 'a018aebe-b75c-4cf1-82ad-20c84f290c6f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'a082bbbc47c95b04b06d3699d9973d9e1ceffb22',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '25fa5223-9f40-49f0-a071-1cc71e529983',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'ff7f841a52885ffaae059d9b2967e6d0706fd2bf',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '84b956f2-8323-469c-abb2-5c00a429d1e2',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '9fc77ccf272938fbb05aa525f6caa95316b39e26',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: 'b79fe3e6-e796-43e2-9843-40ef0a8fb09f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '30e6d713555785322412682d7408155c6730e470',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '131577bb-f8cb-4ec8-a869-4d767aabdf1f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'cfa5f4b352aa1b5d781d0d892207d4997e32d353',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '25d85766-ba7a-4e36-a391-2db5c196b05e',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '937710d8302251a8758b6714ac4edb26d747e473',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: 'd8e64017-46cb-49a5-a901-2bdb9d2e9652',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '671e2e8340f17dcc543fc3db939be2a7b3510a8d',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '6370f34d-d18a-4ddb-bba6-84578d25ff41',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '59ec90709e24a63e4d2faad24c182a1cf2cee469',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: 'd114ad75-5e4a-41bc-b9c4-364cba643b18',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'dc62ad245859a4ede86aefd60c5499cd85283d35',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '3d296dfe-9dc5-4646-a115-3a509d19e583',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '80af8db65bc47f30a5c06393237b614d42f4884c',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '2e307a0f-98fa-4d3d-a779-09c5d8584f52',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'c219d2f2d88e664f46905ff841145a5eb6fa3749',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '07958054-936d-40bb-bf06-fcda37cdfd79',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'e86c19eddc3c493fa8b563500971406994d92423',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: 'd8236554-d6aa-4581-87db-436918a802d3',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'ceb3c319ff178489f0a27faaa833af3ca4cd3258',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '7d10ee68-f201-4b27-8e3e-0da1b64b6129',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '0438da8a9034496c43d039e7c73ab8e2ebf686bf',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: 'ddfcdfad-b74b-4009-9059-43f278218436',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '34c3214692d24a03443defb1d5f00295cba1e1c1',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '91605017-64e7-414b-9b63-f43e5d9ea029',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'd74dc150eebd782ea9551c07763aa6ec880f522b',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: 'c452a4d3-55c8-48c9-b204-c46a92eb5407',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '5518bb1e29cc53424d1cbeda350ef8f60ff29d82',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: 'a4076c22-e7b1-4587-ac82-5d38e2f79c55',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '7a5edd187867e9d0d623a5d82cfcc51938b3d203',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '4bec7330-8b1b-4e81-b617-b8e7ff56c502',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'a69094de12a8e285f477f8d8d4a137a6d47afe34',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: '23490737-e802-4d1e-a77c-1ea5034249d9',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '17608f9764acae84765bc768c0ac324967099a79',
+        source: '2374fd97-4f89-4312-92b1-fbff5661910e',
+        target: 'c5e32312-f3d6-400e-93d4-57fb0a070f0d',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '0d1c2639c464597955e61acc6c3d15cb721a7e2d',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: 'd8236554-d6aa-4581-87db-436918a802d3',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '003460b73aadc0312e1ad19e84f88cbc7ad27515',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '6370f34d-d18a-4ddb-bba6-84578d25ff41',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '40b200344a44d3744d24f2ee6a7a7706a44b9690',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '383583c8-0714-4872-8cff-0acfa2b89be8',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '211a5bd064d5e9660036b9fd000a676187872a58',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: 'a018aebe-b75c-4cf1-82ad-20c84f290c6f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '275289f4c743db3cac7e9fa3df7569714c1f95f9',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '25fa5223-9f40-49f0-a071-1cc71e529983',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '51ed24623faa8dd640921c2dab7212031e4e9a6c',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '84b956f2-8323-469c-abb2-5c00a429d1e2',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'bad116a63a02df741fd0c2db03c83e132b5d0e47',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: 'a4076c22-e7b1-4587-ac82-5d38e2f79c55',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'f7ee4eaa959d9e62ee8e707d76577201e9cb337b',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '4bec7330-8b1b-4e81-b617-b8e7ff56c502',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '6b40ee31ec06b71829ec7a2439cab15e10112701',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '23490737-e802-4d1e-a77c-1ea5034249d9',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '661fe20129129cd66a2c11bfb54d5e09b4206a76',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: 'c5e32312-f3d6-400e-93d4-57fb0a070f0d',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '864614eceb21ae43e666f7598414fc5a2df2108e',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: 'd114ad75-5e4a-41bc-b9c4-364cba643b18',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'ee31d070c8b897a7ea172f84d18e4ae4ab82e52a',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '3d296dfe-9dc5-4646-a115-3a509d19e583',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '96d5481ead94e4c771d3f35acf352a580b920716',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '2e307a0f-98fa-4d3d-a779-09c5d8584f52',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '4d6fca940d5e7285c94e6ed315c13d61ad481a1e',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '07958054-936d-40bb-bf06-fcda37cdfd79',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '26b7992c95fe197b82b35ebe9126f784a68f0c10',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: 'b79fe3e6-e796-43e2-9843-40ef0a8fb09f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '3cc819bb0a1a5ae0acb97775ea2159a68146525b',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '131577bb-f8cb-4ec8-a869-4d767aabdf1f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '5ea74ca441d8f20032a3b603d3dc2e0df85ad18a',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '25d85766-ba7a-4e36-a391-2db5c196b05e',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '4d6023ce4ca99df43be5d09c2b1c28d73f914fe3',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: 'd8e64017-46cb-49a5-a901-2bdb9d2e9652',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '73e65606566e418b243bfa08c78207ff7ddf5ab0',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '7d10ee68-f201-4b27-8e3e-0da1b64b6129',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '8c5d49b717fe42f3beea96c38293893c9cf1309e',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: 'ddfcdfad-b74b-4009-9059-43f278218436',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '3e4a7d56df0cf8731db5e43e6f95398b8133b0ac',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: '91605017-64e7-414b-9b63-f43e5d9ea029',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '3bf36b51f3d550f03d51bec4b1a3a6928f360b85',
+        source: '4f68b761-88cd-426c-a881-7589890368ab',
+        target: 'c452a4d3-55c8-48c9-b204-c46a92eb5407',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'd71ddc9a04453a07cd9967f9d1ff91edac93d246',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '25d85766-ba7a-4e36-a391-2db5c196b05e',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '2285a9585ede7d0dde6ab8f3d0e2b853f434be4b',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: 'd8e64017-46cb-49a5-a901-2bdb9d2e9652',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '8b1352c575eb684a176672c736a0bda987fab794',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '383583c8-0714-4872-8cff-0acfa2b89be8',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '4d91b8060387686ebb520a5a190dc628e92cac95',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: 'a018aebe-b75c-4cf1-82ad-20c84f290c6f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '5e9f2005c9f46e97d386f7db0c4b4eac96dc8413',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '91605017-64e7-414b-9b63-f43e5d9ea029',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '166728bc8da1c9b6f5a6575999c0dd8bdefee4a4',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: 'c452a4d3-55c8-48c9-b204-c46a92eb5407',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'c00f2cfedca820b3f8d656fc2b01e4fdb9e99270',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: 'b79fe3e6-e796-43e2-9843-40ef0a8fb09f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'a8c15cdf185ecf5a2fb90235500e458d6b9b0536',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '131577bb-f8cb-4ec8-a869-4d767aabdf1f',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'e046040eaa79604506b2d93402ff543c362f211b',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '25fa5223-9f40-49f0-a071-1cc71e529983',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'f61974ba78d8569af3e1c9668a8e8c9d5b581dfb',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '84b956f2-8323-469c-abb2-5c00a429d1e2',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'b5959efc554ec4566248ed479391e40dcc88bc53',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '6370f34d-d18a-4ddb-bba6-84578d25ff41',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '85c828bd56713a6511bd5742727a7d67647648ed',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: 'd8236554-d6aa-4581-87db-436918a802d3',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '83c2b8a59dc3f83c6dcf639edbbd660c33eed2c5',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: 'd114ad75-5e4a-41bc-b9c4-364cba643b18',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'eeac9c5dfbdfe99d88820dc08b05321bc2eae70d',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '3d296dfe-9dc5-4646-a115-3a509d19e583',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'f065dd469c30205034af348af85771a575cac4e8',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '23490737-e802-4d1e-a77c-1ea5034249d9',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '374571852986668bbb5c422672981648bc7e5954',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: 'c5e32312-f3d6-400e-93d4-57fb0a070f0d',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '25bb48c2bc92a6dfe62d91d2afefaef5b98d8768',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '7d10ee68-f201-4b27-8e3e-0da1b64b6129',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '27e871d8ae75286ed09737fcaf36df7bc7247eb6',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: 'ddfcdfad-b74b-4009-9059-43f278218436',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: 'ac4e09df137c5fe683b1c25ada2972daa2153408',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '2e307a0f-98fa-4d3d-a779-09c5d8584f52',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '0613c7583518f83700384fafaed588090d2d8da4',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '07958054-936d-40bb-bf06-fcda37cdfd79',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '07f3a22a995a3dd8af88f0a3603874d2c42941a6',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: 'a4076c22-e7b1-4587-ac82-5d38e2f79c55',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '1eb730a0e49beb04b4123fd694512257d099d47b',
+        source: 'e12de580-af43-4c39-8399-448f484e85dc',
+        target: '4bec7330-8b1b-4e81-b617-b8e7ff56c502',
+        attributes: { relType: 'has access to'
+            },
+        },
+        {
+        key: '68a75fd5f32be81246ab1abfa4dddc52313b612e',
+        source: 'BPR_kwDOE0HLS84BZNnd',
+        target: 'MDEwOlJlcG9zaXRvcnkzMjMwNzg5ODc=',
+        attributes: { relType: 'configured on'
+            },
+        },
+        {
+        key: 'e1725c0909186fef1bf985e48b154b7f5b1117f0',
+        source: 'e56d82e2-122f-4b66-87c7-84733cd478f0',
+        target: 'BPR_kwDOE0HLS84BZNnd',
+        attributes: { relType: 'protected by'
+            },
+        },
+    ],
+    options: { type: 'mixed', multi: true, allowSelfLoops: true
+    },
+};
+}

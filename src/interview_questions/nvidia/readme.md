@@ -33,34 +33,36 @@ just thinking about what i'm trying to solve, I sometimes need to remind myself 
 - <s>Graph Traversals (BFS & DFS)</s>
 
 7.2.22
-- Binary search
-- Sorting Algorithms (Quick & Merge)
-- read - https://docs.google.com/document/d/14MMEDLjTxZEAzlARV4run4W0yBBIsASELklxMYX00LI/edit#heading=h.e2qjv88qk5i
+- <s>Binary search</s>
+- <s>Sorting Algorithms (Quick & Merge)</s>
+- <s>read - https://docs.google.com/document/d/14MMEDLjTxZEAzlARV4run4W0yBBIsASELklxMYX00LI/edit#heading=h.e2qjv88qk5i</s>
 - interview question
 
 8.2.22
-- watch - https://www.youtube.com/watch?v=IFrDkjpEKYE&ab_channel=Errichto2
+- <s>watch - https://www.youtube.com/watch?v=IFrDkjpEKYE&ab_channel=Errichto2</s>
 - Sliding window
+- binary search tree, complexity and properties
 - Inverting a binary tree 
-- Reverse a Linked List
-- randomize an array
+- <s> Reverse a Linked List </s>
+- <s> randomize an array </s>
 
 9.2.22
 - Heaps - what are they used for, implement (if not too hard)
 - dfs tolopogical sorting
-- complexity analysis - what is more heavy than what
-- common data structures and their complexities
 - interview question
 
 10.2.22
-- fibonacci (in multiple ways)
+- <s>fibonacci (in multiple ways)</s>
 - review dynamic programming
-- fizz buzz
+- <s>fizz buzz</s>
 - interview question
 
 11.2.22
+- complexity analysis - what is more heavy than what
 - anything I didn't get around to from the previous days (if too ambitios)
 - https://leetcode.com/problems/add-two-numbers/
 
 12.2.22 - ...
-- progrmaming questions 
+- progrmaming questions
+- system deisgn of previous systems 
+- work challanges
