@@ -38,3 +38,7 @@ abstract loading, displaying, sorting and filtering data of all types -
 we have a bunch of data from different domains and we want to run policies on it. The whole process of figuring out a general enough way to store the data -  key value, json (we went with key value) for it to be a generic base for custom rules. 
 
 So we want flexibility such that every person can write their own file extractors and every person can write their own custom rules. Figuring out what’s shared and how to make the process of writing each rule and each extractor pure requires preprocessing, figuring out what each resource needs and creating a general flow in the background to which extractors and rules connect.
+
+## Datree system design
+
+![datree](datree.svg)

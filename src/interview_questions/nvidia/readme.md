@@ -26,6 +26,7 @@ productive things, but this is part of not apologising for how I feel and aligni
 so this is productive, and until I manage to not have these feelings that stop me from 
 just thinking about what i'm trying to solve, I sometimes need to remind myself this.
 
+A really good youtube channel I found is called neetcode
 
 6.2.22
 - <s>implement queue</s>
@@ -36,33 +37,33 @@ just thinking about what i'm trying to solve, I sometimes need to remind myself 
 - <s>Binary search</s>
 - <s>Sorting Algorithms (Quick & Merge)</s>
 - <s>read - https://docs.google.com/document/d/14MMEDLjTxZEAzlARV4run4W0yBBIsASELklxMYX00LI/edit#heading=h.e2qjv88qk5i</s>
-- interview question
 
 8.2.22
 - <s>watch - https://www.youtube.com/watch?v=IFrDkjpEKYE&ab_channel=Errichto2</s>
-- Sliding window
-- binary search tree, complexity and properties
-- Inverting a binary tree 
+- <s>Sliding window</s>
+- <s>binary search tree, complexity and properties</s>
+- <s>Inverting a binary tree </s>
 - <s> Reverse a Linked List </s>
 - <s> randomize an array </s>
 
 9.2.22
-- Heaps - what are they used for, implement (if not too hard)
-- dfs tolopogical sorting
-- interview question
+- <s>Heaps - what are they used for, implement (if not too hard)</s>
 
 10.2.22
 - <s>fibonacci (in multiple ways)</s>
-- review dynamic programming
+- <s>review dynamic programming</s>
 - <s>fizz buzz</s>
-- interview question
 
 11.2.22
-- complexity analysis - what is more heavy than what
-- anything I didn't get around to from the previous days (if too ambitios)
-- https://leetcode.com/problems/add-two-numbers/
 
-12.2.22 - ...
+12.2.22
+- <s>prepare questions for nvidia</s>
+- <s>system deisgn of previous systems </s>
+- <s>challanges I had in my previous work</s>
+
+13.2.22
+- implement dijkstra without min heap
+- <s>dfs tolopogical sorting</s>
+- complexity analysis - what is more heavy than what
+- https://leetcode.com/problems/add-two-numbers/
 - progrmaming questions
-- system deisgn of previous systems 
-- work challanges
