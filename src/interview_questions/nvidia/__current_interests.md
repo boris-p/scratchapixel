@@ -12,4 +12,5 @@ technology - webassembly, ml
 
 Having the option to design systems in high scale, taking the time and research how to approach tasks - so tasks that don't always have a clear answer and involve some sense of uncertainty and research on how to approach them/ do them.
 
+
 Learning from other people and working in conjunction with technically strong people.
